@@ -3,49 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akshaj Sri | Portfolio</title>
+    <title>Akshaj's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+    <!-- Header -->
     <header>
-        <h1>Akshaj Sri</h1>
-        <p>Computer Science Engineer | IoT | AI Enthusiast</p>
+        <nav>
+            <h1>Akshaj Sri</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#github">GitHub</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="toggleMode">🌙</button></li>
+            </ul>
+        </nav>
     </header>
 
+    <!-- Hero Section -->
+    <section id="hero">
+        <h2>Hi, I'm <span id="typed-text"></span></h2>
+        <p>Welcome to my interactive portfolio!</p>
+        <a href="#projects" class="btn">See My Work</a>
+    </section>
+
+    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello! I’m Akshaj Sri, a B.Tech CSE student passionate about smart systems, IoT, and AI projects. I love creating technology that solves real-world problems.</p>
+        <p>I am a BTech CSE student passionate about programming, AI, and web development. I love creating interactive and user-friendly web applications.</p>
+        <div class="social-links">
+            <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/yourusername" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
     </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>💻 C, C++, Python</li>
-            <li>🌐 HTML, CSS, JavaScript</li>
-            <li>☁️ IoT & Embedded Systems</li>
-            <li>🤖 Artificial Intelligence</li>
-        </ul>
-    </section>
-
+    <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
-        <ul>
-            <li>🌿 Smart Plant Watering System</li>
-            <li>🚨 Silent SOS Emergency Alert</li>
-            <li>💬 AI-Powered Pet Communicator</li>
-        </ul>
+        <div class="project-container">
+            <div class="project-card" onclick="openModal('project1')">
+                <h3>Project 1</h3>
+                <p>Short description of project 1</p>
+            </div>
+            <div class="project-card" onclick="openModal('project2')">
+                <h3>Project 2</h3>
+                <p>Short description of project 2</p>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: akshaj@example.com</p>
-        <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+    <!-- GitHub Repos Section -->
+    <section id="github">
+        <h2>My GitHub Repositories</h2>
+        <div id="repos" class="repo-container">
+            <p>Loading repositories...</p>
+        </div>
     </section>
+
+    <!-- Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Project Title</h2>
+            <p id="modalDesc">Project description will appear here.</p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <button id="backToTop" onclick="scrollToTop()">↑</button>
 
     <footer>
-        <p>© 2025 Akshaj Sri | All Rights Reserved</p>
-    </footer>
-
+        <p>&copy; 2025 Akshaj Sri. All rights reserved.</p>
     <script src="script.js"></script>
-</body>
 </html>
+</body>
+
